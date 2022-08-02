@@ -1,14 +1,13 @@
 class Solution {
 public:
     vector<int> decode(vector<int>& encoded, int first) {
-        int n=encoded.size();
+        // int n=encoded.size();
         vector<int>ans;
         ans.push_back(first);
-        int k;
+        // int k;
         for(int i=0;i<encoded.size();++i)
         {
-            k=ans[i]^encoded[i];
-            ans.push_back(k);
+            ans.push_back(ans[i]^encoded[i]);
         }
         return ans;
     }
