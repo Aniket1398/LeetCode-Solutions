@@ -3,7 +3,7 @@ public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
         unordered_map<string,vector<string>>mpp;
         vector<vector<string>>ans;
-        for(auto &str:strs)
+        for(string &str:strs)
         {
             string s=str;
             sort(s.begin(),s.end());
